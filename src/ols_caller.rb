@@ -13,7 +13,7 @@ module OLSCaller
   # @param [String] ontology_id The ontology id.
   # @param [Integer] timeout The timeout in seconds.
   # @return [Hash] The ontology metadata.
-  def get_ontology(ontology_id, timeout = 3)
+  def get_ontology(ontology_id, timeout = 10)
     ontology_uri = URI.parse("#{@ols_host}ols/api/ontologies/#{ontology_id}")
     begin
       response = HTTP.timeout(read: timeout).follow.get(ontology_uri)
