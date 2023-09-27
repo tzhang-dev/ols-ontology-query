@@ -4,12 +4,15 @@ This is a simple Ruby wrapper for the [Ontology Lookup Service](http://www.ebi.a
 
 It allows you to query the OLS for ontology id and retrieve meta information about the ontology.
 
+The project is tested under Linux and windows, and should work on Mac OS.
+
 # Set up
 
 This project requires Ruby 3.14 or higher.
 
 ```shell
-$ git clone https://github.com/yah-yuan/ols-ontology-query.git
+$ git clone https://github.com/yah-yuan/ols-ontology-query.git ols
+$ cd ols
 $ bundle install
 ```
 
@@ -29,6 +32,7 @@ If the ontology id is valid, the script will return the following information in
 - The ontology description 
 - The number of terms 
 - The current status
+
 ## Example
 
 ```shell
@@ -45,13 +49,18 @@ $ ruby main.rb agro
 
 To build docker image, you need to have [Docker](https://www.docker.com/) installed.
 
-The following assumes you have already cloned this repository and grant right privileges to the docker daemon.
+The following assumes you have already granted correct privileges to current user to access docker.
 
 To build the docker image, run the following command:
 
 ```shell
+# with the repository cloned, run the following command:
 $ docker build -t ols .
+# OR, without cloning the repository, run the following command:
+$ docker build -t ols github.com/yah-yuan/ols-ontology-query
 ```
+
+Then we have an image named `ols` built.
 
 To run the docker image to query ontology, run the following command:
 
