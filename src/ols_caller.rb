@@ -17,7 +17,7 @@ module OLSCaller
     ontology_uri = URI.parse("#{@ols_host}ols/api/ontologies/#{ontology_id}")
     begin
       response = HTTP.timeout(read: timeout).follow.get(ontology_uri)
-    rescue HTTP::TimeoutError => e
+    rescue => e
       STDERR.puts "Error: #{e}"
       exit
     end

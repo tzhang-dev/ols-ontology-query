@@ -16,8 +16,11 @@ class OLSResponse
     when 404
       STDERR.puts "Error: The requested ontology does not exist."
       exit
-    else
+    when 200
       @response = response
+    else
+      STDERR.puts "Error: Request failed with status code #{response.code}."
+      exit
     end
   end
 

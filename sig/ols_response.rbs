@@ -1,3 +1,7 @@
+use HTTP::Response
+
 class OLSResponse
+  @response: Response
+
   def body: -> Hash[string, string]
 end
