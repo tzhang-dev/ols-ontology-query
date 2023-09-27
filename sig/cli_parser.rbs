@@ -1,0 +1,5 @@
+class CliParser
+  @ontology_id: string
+
+  def ontology_id: -> string
+end

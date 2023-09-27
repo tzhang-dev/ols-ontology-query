@@ -1,0 +1,5 @@
+class OLSCaller
+  @ols_host: string
+
+  def get_ontology: (string onotology_id) -> Hash[string, string]
+end

@@ -1,0 +1,3 @@
+class OLSResponse
+  def body: -> Hash[string, string]
+end
