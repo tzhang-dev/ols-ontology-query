@@ -1,5 +1,9 @@
 class CliParser
   @ontology_id: string
 
+  @usage_prompt: untyped
+
+  def get_env: -> untyped
+
   def ontology_id: -> string
 end

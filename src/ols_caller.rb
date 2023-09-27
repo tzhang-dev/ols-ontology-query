@@ -2,6 +2,7 @@
 
 require 'uri'
 require 'http'
+require 'resolv-replace'
 require './src/ols_response'
 
 # A group of OLS API caller.

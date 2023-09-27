@@ -9,6 +9,7 @@ It allows you to query the OLS for ontology id and retrieve meta information abo
 This project requires Ruby 3.14 or higher.
 
 ```shell
+$ git clone https://github.com/yah-yuan/ols-ontology-query.git
 $ bundle install
 ```
 
@@ -42,8 +43,18 @@ $ ruby main.rb agro
 
 # Docker Usage
 
+To build docker image, you need to have [Docker](https://www.docker.com/) installed.
+
+The following assumes you have already cloned this repository and grant right privileges to the docker daemon.
+
 To build the docker image, run the following command:
 
 ```shell
 $ docker build -t ols .
+```
+
+To run the docker image to query ontology, run the following command:
+
+```shell
+$ docker run --rm ols <ontology id>
 ```
